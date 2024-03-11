@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="web4.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<nav>
+
+        <div class="logo">
+             <p class="animated-foter">Hostel.com</p>
+            </div>
+            <!--  <div class="logo1"><img src="bookstore1.jpg" alt="logo"></div>-->
+        <ul>
+            
+            
+            
+            <li><a href="#ab">ABOUT</a></li>
+            <li><a href="#ourser">SERVICE</a></li>
+            <li><a href="#" onclick="togglePopup()">CONTACT</a></li>
+            <li><a href="#">HOME</a></li>
+        </ul>
+        
+    </nav>
+    
+    
+        
+
+<div id="popup" class="popup">
+    <h2 class="formname"><mark>Hostel.com(Fill the Form)</mark></h2>
+    <form>
+    
+        
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="number">Phone no:</label>
+    <input type="num" id="num" name="num" required>
+
+    <label for="text">Availability City:</label>
+  <select name="town" id="town" class="select">
+  <option value="none">Select</option>
+    <option value="town1">Noida</option>
+    <option value="town2">Greater Noida</option>
+  </select>
+  
+   <label for="text">Gender:</label>
+  <select name="gender" id="gender" class="gender" required>
+  <option value="none">Select</option>
+    <option value="town1">Male</option>
+    <option value="town2">Female</option>
+  </select>
+    <br>
+    <br>
+    
+    <label for="text">He/She is:</label>
+  <select name="profestion" id="profestion" class="profestion" required>
+  <option value="none">Select</option>
+    <option value="pro1">Working</option>
+    <option value="pro2">Student</option>
+    <option value="pro3">Other's</option>
+  </select>
+    <br>
+    <br>
+    
+        <label for="text">Inquiry</label>
+        <textarea class="textarea"></textarea>
+        <button type="submit" onclick="submitForm()">Submit</button>
+    </form>
+    <button onclick="togglePopup()" class="close">Close</button>
+    
+</div>
+
+<div id="overlay" class="overlay" onclick="togglePopup()"></div>
+
+<script>
+
+    function togglePopup() {
+        var popup = document.getElementById('popup');
+        var overlay = document.getElementById('overlay');
+
+        if (popup.style.display === 'none') {
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+        } else {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+    }
+    
+   
+    
+    
+</script>
+
+
+
+<script>
+    let currentIndex = 0;
+
+    function showTestimonial(index) {
+        const testimonialSlider = document.querySelector('.testimonial-slider');
+        const cardWidth = document.querySelector('.testimonial-card').offsetWidth;
+
+        currentIndex = index;
+        testimonialSlider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    function nextTestimonial() {
+        const totalTestimonials = document.querySelectorAll('.testimonial-card').length;
+        currentIndex = (currentIndex + 1) % totalTestimonials;
+        showTestimonial(currentIndex);
+    }
+
+    function prevTestimonial() {
+        const totalTestimonials = document.querySelectorAll('.testimonial-card').length;
+        currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
+        showTestimonial(currentIndex);
+    }
+</script>
+
+
+
+
+
+<center><div class="lo"><img src="logo420.jpg">
+
+<div class="wtsp">
+<a href=" https://wa.me/917633942849" target="_blank"><img src="wtsp.jpeg" width="75px" class="wtsp-img"></a>
+</div>
+
+<div class="phn-bg">
+<a href="tel:917633942849"><img src="phone.png" width="75px" class="phn-img"></a>
+</div>
+
+<div class="mail-sec">
+<a href="mailto:hostel.ncr@gmail.com"><img src="mail.png" width="75px" class="mail-img"></a>
+</div>
+
+
+</div></center>
+
+
+<div class="hero">
+    <div class="tag">Your Comfortable Stay
+    
+    </div>
+    </div> 
+    
+    
+    <div class="des"><h2>We've got Options for You!</h2>
+    
+    </div>
+    <p class="p">Student housing made easy, We understand the student's journey, because we’ve lived it. </p>
+    
+    <div class="shop">
+    
+    <div class="section1 boxes">
+    <div class="box-contant">
+    <center><h2>Hostel</h2></center>
+    <div class="box1-img" style="background-image:url('pg2.jpg');" >
+    
+    </div>
+    <section></section>
+    </div>
+    </div>
+    
+    <div class="section2 boxes">
+    <div class="box-contant">
+    <center><h2>P.G</h2></center>
+    <div class="box1-img" style="background-image:url('pg10.jpg');">
+    </div>
+    </div>
+    </div>
+    
+    <div class="section3 boxes">
+    <div class="box">
+    <center><h2>Co-living</h2></center>
+    <div class="box1-img" style="background-image:url('pg3.jpg');"></div>
+    </div>
+    </div>
+    
+    <div class="section4 boxes">
+    <div class="box">
+    <center><h2>Flats</h2></center>
+    <div class="box1-img" style="background-image:url('pg4.jpg');" ></div>
+    </div>
+    <section class="single-sec">Our fully furnished flat offers comfortable living space for foreigners & for those who wants to cook their own traditional meal. 
+    It has attached kitchen, a comfortable bedroom, a stylish bathroom & a cozy living space.</section>
+    </div>
+    
+    <div class="section5 boxes">
+    <div class="box">
+    <center><h2>Double Sharing</h2></center>
+    <div class="box1-img" style="background-image:url('pg5.jpg');" ></div>
+    </div>
+    <section class="single-sec">Experience camaraderie in our spacious rooms with two roommates and enjoy the benefits of cost-effective accommodation. 
+    Perfect for individuals seeking a budget-friendly living arrangement and create lasting memories..</section>
+    </div>
+    
+    <div class="section6 boxes">
+    <div class="box">
+    <center><h2>Private Room</h2></center>
+    <div class="box1-img" style="background-image:url('pg6.jpg');"></div>
+    </div>
+    <section class="single-sec">Escape to your own oasis in our private hostel room.
+     Enjoy the privacy and comfort of your own space while still having access to shared amenities and a vibrant community atmosphere.
+     Ideal for focused studying and relaxation.</section>
+    </div>
+    
+    <div class="section7 boxes">
+    <div class="box">
+    <center><h2>Room</h2></center>
+    <div class="box1-img" style="background-image:url('pg.jpg');"></div>
+    </div>
+    <section class="single-sec">Experience affordable cozy living in our single sharing hostel room.
+     Enjoy privacy and a sense of community as you connect with a fellow resident in a fully furnished room.
+      Enjoy the company of a roommate while still having your own space.</section>
+    </div>
+    
+    <div class="section8 boxes">
+    <div class="box">
+    <center><h2>Single Room</h2></center>
+    <div class="box1-img" style="background-image:url('pg8.jpg');"></div>
+    </div>
+    <section class="single-sec">Experience affordable cozy living in our single sharing hostel room.
+     Enjoy privacy and a sense of community as you connect with a fellow resident in a fully furnished room.
+      Enjoy the company of a roommate while still having your own space.</section>
+    </div>
+    
+    </div>
+    
+    <div class="service-sec">
+    <h1 id="ourser">Our Service</h1>
+      </div>
+    
+    <div class="des"><h2>Featured hostel destinations</h2>
+    
+    </div>
+    <p class="p">Right Now We Provide Our Service in Two Town's </p>
+   
+    <div class="shop">
+    
+    <div class="section1 boxes">
+    <div class="box-contant">
+    <center><h2>Noida</h2></center>
+    <div class="box1-img" style="background-image:url('noida4.jpg');">
+    </div>
+    </div>
+    </div>
+    
+    
+    <div class="section2 boxes">
+    <div class="box-contant">
+    <center><h2>Greater Noida</h2></center>
+    <div class="box1-img" style="background-image:url('greater4.jpg');">
+    </div>
+    </div>
+    </div>
+    
+    </div>
+    
+    
+
+    <center><h1 class="abb">Hostel Features</h1></center>
+    
+    <div class="border"></div>
+<div class="hostel-features">
+    <img src="facebook.jpeg" alt="Hostel Logo" class="fpic">
+    <h4>Hostel Features</h4>
+    <p class="f1">Welcome to our hostel, where we provide a variety of amenities to make your stay comfortable and enjoyable.</p>
+
+    <img src="facebook.jpeg" alt="Hostel Logo" class="fpic">
+    <h4>Gym Facilities</h4>
+    <p class="f1">Stay fit during your stay with access to our fully-equipped gym.</p>
+
+    <img src="facebook.jpeg" alt="Hostel Logo" class="fpic">
+    <h4>Healthy Yummy Food</h4>
+    <p class="f1">Enjoy nutritious and tasty meals prepared by our skilled chefs.</p>
+
+    <img src="facebook.jpeg" alt="Hostel Logo" class="fpic">
+    <h3>Free Wi-Fi</h3>
+    <p class="f1">Stay connected with our high-speed, complimentary Wi-Fi throughout the hostel.</p>
+    
+</div>
+<div class="hostel-features1">
+    <img src="facebook.jpeg" alt="Hostel Logo" class="fpic">
+    <h4>Peaceful Environment</h4>
+    <p class="f1">Welcome to our hostel, where we provide a variety of amenities to make your stay comfortable and enjoyable.</p>
+
+    <img src="facebook.jpeg" alt="Hostel Logo" class="fpic">
+    <h4>Recreational Areas</h4>
+    <p class="f1">Stay fit during your stay with access to our fully-equipped gym.</p>
+
+    <img src="facebook.jpeg" alt="Hostel Logo" class="fpic">
+    <h4>Free Laundry</h4>
+    <p class="f1">Enjoy nutritious and tasty meals prepared by our skilled chefs.</p>
+
+    <img src="facebook.jpeg" alt="Hostel Logo" class="fpic">
+    <h4>Fully Furnished Rooms</h4>
+    <p class="f1">Stay connected with our high-speed, complimentary Wi-Fi throughout the hostel.</p>
+    </div>
+
+<div class="hostel-features2">
+    <img src="facebook.jpeg" alt="Hostel Logo" class="fpic">
+    <h4>24x7 Reception</h4>
+    <p class="f1">Welcome to our hostel, where we provide a variety of amenities to make your stay comfortable and enjoyable.</p>
+
+    <img src="facebook.jpeg" alt="Hostel Logo" class="fpic">
+    <h4>Perfect Home Guarantee</h4>
+    <p class="f1">Stay fit during your stay with access to our fully-equipped gym.</p>
+
+    <img src="facebook.jpeg" alt="Hostel Logo" class="fpic">
+    <h4>Your Safety our Priority</h4>
+    <p class="f1">Enjoy nutritious and tasty meals prepared by our skilled chefs.</p>
+
+    <img src="facebook.jpeg" alt="Hostel Logo" class="fpic">
+    <h4>Career Adviser</h4>
+    <p class="f1">We can also help you to get admissions and scholarships.we provide internship oportunities
+
+    </p>
+    </div>
+
+   
+    
+    <div class="secform">
+    <div class="sec-form">
+    
+    <h2 class="formname">INQUIRY NOW!</h2>
+    <form>
+    
+        
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+ 
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="number">Phone No:</label>
+    <input type="num" id="num" name="num" required>
+
+    <label for="text">Availability City:</label>
+  <select name="town" id="town" class="select">
+  <option value="none">Select</option>
+    <option value="town1">Noida</option>
+    <option value="town2">Greater Noida</option>
+  </select>
+    <br>
+    <br>
+    
+    <label for="text">Gender:</label>
+  <select name="gender" id="gender" class="gender" required>
+  <option value="none">Select</option>
+    <option value="town1">Male</option>
+    <option value="town2">Female</option>
+  </select>
+    <br>
+    <br>
+    
+    <label for="text">He/She is:</label>
+  <select name="profestion" id="profestion" class="profestion" required>
+  <option value="none">Select</option>
+    <option value="pro1">Working</option>
+    <option value="pro2">Student</option>
+    <option value="pro3">Other's</option>
+  </select>
+    <br>
+    <br>
+    
+        <label for="text">Inquiry</label>
+        <textarea class="textarea"></textarea>
+        <br>
+        <button type="submit" onclick="submitForm()">Submit</button>
+    </form> 
+    </div>
+    
+      <div class="sec-form1" >
+ <center><div class="loction">
+        
+          
+   <h2><mark>Map Location</mark></h2>
+   
+   </div></center>
+   
+    <div class="sec-form2" >
+    <p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14723.28512944174!2d88.382941!3d22.697696000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89d63abe3c529%3A0x4a1397a6a32dc1c6!2sNoida%20International%20University%20Admission%20Centre%20Kolkata!5e0!3m2!1sen!2sin!4v1709801803869!5m2!1sen!2sin" width="950" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" alt="map"></iframe></p>
+    </div>
+      </div>
+   
+   
+   <div class="client">“OUR VALUABLE CLIENT LIST”</div>
+   
+   <div class="container">
+       <div class="slide-container">
+    
+    <div class="slide-img">
+    <img src="greater1.jpg" alt="" class="o">
+    </div>
+    
+    <div class="slide-img">
+    <img src="greater2.jpg" alt="" class="o">
+    </div>
+    
+    <div class="slide-img" >
+    <img src="greater3.jpg" alt="" class="o">
+    </div>
+    
+    <div class="slide-img">
+    <img src="greater4.jpg" alt="" class="o">
+    </div>
+    
+    <div class="slide-img">
+    <img src="greater1.jpg" alt="" class="o">
+    </div>
+    
+    <div class="slide-img">
+    <img src="greater2.jpg" alt="" class="o">
+    </div>
+    
+    <div class="slide-img" >
+    <img src="greater3.jpg" alt="" class="o">
+    </div>
+    
+    <div class="slide-img">
+    <img src="greater4.jpg" alt="" class="o">
+    </div>
+    </div>
+    </div>
+   
+   <div class="border11"></div>
+  <!-- remiew -->
+  
+  <div class="client1">
+  <div class="inner">
+  <h2>“CUSTOMER'S REVIEW”</h2>
+  <div class="border"></div>
+  
+
+  <div class="testimonial-container">
+    <div class="testimonial-slider">
+        <div class="testimonial-card">
+            <img src="rev1.jpg" alt="User 1">
+            <h2>Yuvraj Singh</h2>
+            <div class="star">
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   </div>
+            <section> Wonderful place for budget accomodation 10k, stayed in a dormitory of 2 beds on my own</section>
+        </div>
+        <div class="testimonial-card">
+            <img src="insta.jpeg" alt="User 2">
+            <h2>Komal</h2>
+            <div class="star">
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   </div>
+            <section>Brilliant double room spotless!, great kitchen area. First time staying in a hostel in Ireland and it wont be the last.</section>
+        </div>
+              <div class="testimonial-card">
+            <img src="rev3.jpg" alt="User 3">
+            <h2>Suraj Goswami</h2>
+            <div class="star">
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   </div>
+            <section>Lovely staff, big, quiet rooms, free towel.
+             Not a money making scheme like some places, but a good honest hostel!</section>
+        </div>
+        
+              <div class="testimonial-card">
+            <img src="facebook.jpeg" alt="User 1">
+            <h2>John Doe</h2>
+            <div class="star">
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   </div>
+            <section>Lovely helpful staff. Super clean hostel.
+             Bita 1 is in a beautiful area with a variety of lovely walks. I had a great stay</section>
+        </div>
+        
+              <div class="testimonial-card">
+            <img src="facebook.jpeg" alt="User 1">
+            <h2>John Doe</h2>
+            <div class="star">
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   </div>
+            <section> I had a lovely, relaxing time at this place.
+   It was everything I needed and wanted from a hostel and very new, clean and homely</section>
+        </div>
+        
+              <div class="testimonial-card">
+            <img src="facebook.jpeg" alt="User 1">
+            <h2>John Doe</h2>
+            <div class="star">
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   </div>
+            <section>I really like this hostel. Yes, the male dorm is big, but rarely full.
+             Wifi strong, and great, fully fitted kitchen.</section>
+        </div>
+        
+              <div class="testimonial-card">
+            <img src="facebook.jpeg" alt="User 1">
+            <h2>John Doe</h2>
+            <div class="star">
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   </div>
+            <section>Very enjoyable. Clear communication before and during stay. Umesh is  very helpful.</section>
+        </div>
+        
+              <div class="testimonial-card">
+            <img src="facebook.jpeg" alt="User 1">
+            <h2>John Doe</h2>
+            <div class="star">
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   <span class="fa fa-star checked"></span>
+   </div>
+            <section>Thank you so much for all your help. They even suggested a lovely drive for us which was the best surprise. Would stay again..</section>
+        </div>
+        
+        
+        
+        <!-- Add more testimonial cards as needed -->
+    </div>
+    <button class="prev" onclick="prevTestimonial()">&#10094; Previous</button>
+    <button class="next" onclick="nextTestimonial()">Next &#10095;</button>
+</div>
+    
+    
+  </div>
+  </div>
+      
+      
+     <div class="border11"></div>
+       <div class="about-section">
+   <center> <h1 id="ab">About Our Founder</h1></center>
+    <div class="border"></div>
+    <img src="founder.png" alt="Founder's Picture" class="about">
+    <h2 class="foundname">Umesh pandit</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elNullamit.  eget felis vel ligula varius fringilla ut non lacus. Proin vel metus nec elit aliquet tristique. Suspendisse potenti. Sed ac libero nec libero efficitur ullamcorper.</p>
+    <p>Our company was founded by [Founder's Name], a visionary leader with a passion for [industry/domain]. [Founder's Name] has [brief background or achievements], and their dedication has been instrumental in shaping the company's success.</p>
+</div>
+      
+      
+    <div class="fo-background">
+    <div class="links">
+    <ul>
+    <h4 class="link-tag"><center>Links</center></h4>
+    <li><a href="#">Home</a></li>
+    <br>
+    <li><a href="#ab">About</a></li>
+    <br>
+    <li><a href="#ourser">Service</a></li>
+    <br>
+    <div class="cont">
+    <div class="n">
+    <h4>Contact</h4>
+    <div class="contact-container">
+    <h2>Contact Details</h2>
+    <div class="contact-details">
+        <p>Email:hostel.ncr@gmail.com</p>
+        <p>Phone:7633942849</p>
+        <p>Address:NIU collage,(Greater Noida)</p>
+    </div>
+    <div class="social-media">
+        <a href="#" target="_blank"><img src="facebook.jpeg" alt="Facebook" width="50px"></a>
+        <a href="#" target="_blank"><img src="insta.jpeg" alt="Instagram" width="50"></a>
+        <a href="#" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" width="50"></a>
+        <!-- Add more social media links as needed -->
+    </div>
+</div>
+    </div>
+    </div></li>
+    </ul>
+    
+    
+    
+    
+    <div class="links2">
+    
+    <ul>
+    <span><h2>Locate Hostel.com</h2></span>
+    <li><span><u>Hostel near Noida International University</u></span></li>
+    <li><span><u>Hostel near Galgotias University</u></span></li>
+    <li><span><u>Hostel near Sharda University</u></span></li>
+    <li><span><u>Hostel near Amity University(Greater Noida)</u></span></li>
+    <li><span><u>Hostel near Lloyd University</u></span></li>
+    <li><span><u>Hostel near GL Bajaj Institute</u></span></li>
+    <li><span><u>Hostel near Gautam Budha University</u></span></li>
+    <li><span><u>Hostel near Bennett University</u></span></li>
+    <li><span><u>Hostel near Bennett University</u></span></li>
+    <li><span><u>Hostel near Pari Chowk</u></span></li>
+    <li><span><u>Hostel near GNIOT</u></span></li>
+    <li><span><u>Hostel near GCET</u></span></li>
+    </ul>
+    
+    </div>
+    
+    </div>
+    <div class="links3">
+    
+    <ul>
+    <span><h2>Locate Hostel.com</h2></span>
+    <li><span><u>Hostel near Nursing College</u></span></li>
+    <li><span><u>Hostel near Accurate Institute</u></span></li>
+    <li><span><u>Hostel near KCC Institute</u></span></li>
+    <li><span><u>Hostel near Innovative Institute</u></span></li>
+    <li><span><u>Hostel near BIMTECH Institute</u></span></li>
+    <li><span><u>Hostel near Ishan Institute</u></span></li>
+    <li><span><u>Hostel near Mangalmay Institute</u></span></li>
+    <li><span><u>Hostel near KCC Institute</u></span></li>
+    <li><span><u>Hostel near Metro College</u></span></li>
+    <li><span><u>Hostel near Dronacharya College</u></span></li>
+    <li><span><u>Students Hostel near Expo Mart</u></span></li>
+    <li><span><u>Hostel near Army Institute Of Management</u></span></li>
+    </ul>
+    
+    </div>
+    </div>
+    
+    <footer class="move">
+       
+    <marquee behavior="" direction="" scrollamount="25" class="animated-foter">&copy;Welcome To Hostel.com</marquee>
+    </footer>
+
+
+</body>
+</html>
